@@ -1,0 +1,23 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 ">
+            <div class="card">
+                <div class="card-body">
+<form action="/diezmos/agregar" method="post">
+  <div class="form-group">
+        <label for="exampleInputEmail1">usuarios</label><br>
+        <select name="id_usuario">
+                {{#each usuarios}}
+                <option value="{{id_usuario}}">{{nombres}}</option>
+                {{/each}}
+        </select><br>
+           <select name="id_ciudad">
+                {{#each ciudades}}
+                <option value="{{id_ciudad}}">{{ciudad}}</option>
+                {{/each}}
+        </select><br>
+  </div>
+  <button type="submit" class="btn btn-primary">enviar</button>
+</form>
+</div>
+<br>
